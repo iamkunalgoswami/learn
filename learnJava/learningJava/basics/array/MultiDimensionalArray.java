@@ -72,5 +72,33 @@ public class MultiDimensionalArray {
             }
             System.out.println();
         }
+
+        /**
+         * **************
+         * Jagged Array *
+         * **************
+         * 
+         * Initializing and Printing
+         */
+        System.out.println("* Jagged Array *");
+        int[][] jaggedArray = new int[3][];
+        for (int i = 0; i < jaggedArray.length; i++) {
+            int randomValue = (int) (Math.random() * 10) + 1;
+            jaggedArray[i] = new int[randomValue];
+        }
+        // Initializing
+        for (int i = 0; i < jaggedArray.length; i++) {
+            for (int j = 0; j < jaggedArray[i].length; j++) {
+                jaggedArray[i][j] = (int) Math.random() * 10;
+            }
+        }
+        // Printing
+        for (int i = 0; i < jaggedArray.length; i++) {
+            for (int j = 0; j < jaggedArray[i].length; j++) {
+                System.out.print(jaggedArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+
     }
 }
